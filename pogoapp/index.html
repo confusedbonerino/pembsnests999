@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>timers</title>
+<link href="css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.location {
+	font-family: Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana, sans-serif;
+	background:  rgba(121,255,248,0.5);
+}
+.nest {
+	font-family: Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana, sans-serif;
+	background: rgba(121,255,248,0.2);
+}
+.TIMER {
+	font-size:36px;
+	background: rgba(121,255,248,0.8);
+	border:dotted;
+}
+</style>
+</head>
+
+<body><br><br>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/mesprit.png">
+  <tbody>
+    <tr>
+      <td><h1>Pembroke Dock Nests</h1></td>
+    </tr>
+    <tr>
+      <td class="TIMER" align="center" valign="middle" id="TIMER"><p id="demo"></p>
+      
+        <script>
+var countDownDate = new Date("May 30, 2019 01:00:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+</script>
+      
+      </td>
+    </tr>
+    
+    
+    <tr align="center" class="location">
+      <td><strong class="location">Bandstand</strong></td>
+    </tr>
+    <tr align="center">
+      <td class="nest"><font size="-1" class="location">Nest</font><br><br></td>
+    </tr>
+    
+     <tr align="center" class="location">
+      <td><strong class="location">Memorial Park</strong></td>
+    </tr>
+    <tr align="center">
+      <td class="nest"><font size="-1" class="location">Nest</font><br><br></td>
+    </tr>
+    
+     <tr align="center" class="location">
+      <td><strong class="location">Fort Road</strong></td>
+    </tr>
+    <tr align="center">
+      <td class="nest"><font size="-1" class="location">Nest</font><br><br></td>
+    </tr>
+    
+     <tr align="center" class="location">
+      <td><strong class="location">Youth Club/200 Year Wall</strong></td>
+    </tr>
+    <tr align="center">
+      <td class="nest"><font size="-1" class="location">Nest</font><br><br></td>
+    </tr>
+    
+  </tbody>
+</table>
+<p>
+
+</p>
+
+
+
+
+
+</body>
+</html>
