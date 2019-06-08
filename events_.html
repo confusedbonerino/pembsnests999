@@ -3,14 +3,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>eventsapp</title>
+<style type="text/css">
+body p {
+	font-family: Verdana, Geneva, sans-serif;
+}
+body p {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+td {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+</style>
 </head>
 
 <body>
 <table width="100%" border="0" cellspacing="2" cellpadding="2">
   <tr>
     <td align="center">
-    July Community day in:
+    <font size="+2">
+    <strong>July Community day in: </strong>
     <p id="demo"></p>
+    <strong>
     <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Jul 21, 2019 15:37:25").getTime();
@@ -40,8 +53,8 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
-</script>
-    July 21st, 2019
+    </script>
+    July 21st, 2019</strong></font>
     </td>
   </tr>
 </table>
